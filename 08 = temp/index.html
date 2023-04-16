@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoes Store (project-08)</title>
+
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (header(#01)) -->
+
+    <header>
+        <div class="container">
+
+            <!-- 44 -->
+            <div id="menu_hamburger" class="fas fa-bars"></div>
+            <!-- (menu_hamburger برجر = (onclick("navbar"))) js -->
+
+            <!-- 11 -->
+            <a href="#" class="logo">nike</a </div>
+
+            <!-- 22 -->
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#products">products</a>
+                <a href="#featured">featured</a>
+                <a href="#review">review</a>
+            </nav>
+
+            <!-- 33 -->
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-user"></a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (home(#02)) -->
+
+    <div class="home" id="home">
+
+        <div class="slider_container active ">
+            <!-- ((slider_container) => (add("active"))) js -->
+
+            <div class="overlay">
+                <div class="container">
+
+                    <div class="content">
+                        <span>nike Red shoes</span>
+                        <h3>nike metcon shoes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque
+                            veritatis
+                            aut laboriosam earum dolorem iste atque.
+                        </p>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/home-shoe-1.png" class="shoe" alt="">
+                        <img src="images/home-text-1.png" class="text" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_container ">
+
+            <div class="overlay">
+                <div class="container">
+
+                    <div class="content">
+                        <span>nike blue shoes</span>
+                        <h3>nike metcon shoes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque
+                            veritatis
+                            aut laboriosam earum dolorem iste atque.
+                        </p>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/home-shoe-2.png" class="shoe" alt="">
+                        <img src="images/home-text-2.png" class="text" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slider_container ">
+
+            <div class="overlay">
+                <div class="container">
+
+                    <div class="content">
+                        <span>nike Yellow shoes</span>
+                        <h3>nike metcon shoes</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat maiores et eos eaque
+                            veritatis
+                            aut laboriosam earum dolorem iste atque.
+                        </p>
+                        <a href="#" class="btn">add to cart</a>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/home-shoe-3.png" class="shoe" alt="">
+                        <img src="images/home-text-3.png" class="text" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (service(#03)) -->
+
+    <div class="service">
+        <div class=" container">
+
+            <div class="box_container">
+
+                <div class="box">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>fast delivery</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, fugit.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-undo"></i>
+                    <h3>10 days replacements</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, fugit.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-headset"></i>
+                    <h3>24 x 7 support</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, fugit.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (products(#04)) -->
+
+    <div class="products" id="products">
+
+        <h1 class="heading"> LATEST <span>PRODUCTS</span></h1>
+
+        <div class="container">
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-1.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-2.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-3.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-4.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-5.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icon">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-share"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+
+                <img src="images/product-6.png" alt="">
+
+                <div class="content">
+                    <h3>Nike Shoes</h3>
+
+                    <div class="price">$120.99 <span>$150.99</span></div>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (featured(#05)) -->
+
+    <div class="featured" id="featured">
+
+        <h1 class="heading"> FEATURED <span>PRODUCTS</span></h1>
+
+        <div class="container">
+
+            <div class="box_container">
+
+                <div class="img_box">
+
+                    <div class="small_image">
+
+                        <!-- ((featured_image_1) => (addEventListener("big_image_01"))) js -->
+
+                        <img src="images/f-img-1.1.png" class="featured_image_1" alt="">
+                        <img src="images/f-img-1.2.png" class="featured_image_1" alt="">
+                        <img src="images/f-img-1.3.png" class="featured_image_1" alt="">
+                        <img src="images/f-img-1.4.png" class="featured_image_1" alt="">
+                    </div>
+
+                    <div class="big_image">
+                        <img src="images/f-img-1.1.png" class="big_image_01" alt="">
+                        <!-- ((featured_image_1) => (addEventListener("big_image_01"))) js -->
+                    </div>
+
+                </div>
+
+                <div class="content">
+                    <h3>New Nike Airmax Shoes</h3>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Dicta Facilis Praesentium Odit Voluptas
+                        Illum Iure Libero Quis
+                        Fuga Commodi. Autem
+                    </p>
+
+                    <div class="price">$80.99 <span>$120.99</span></div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="box_container">
+
+                <div class="img_box">
+
+                    <div class="small_image">
+                        <img src="images/f-img-2.1.png" class="featured_image_2" alt="">
+                        <img src="images/f-img-2.2.png" class="featured_image_2" alt="">
+                        <img src="images/f-img-2.3.png" class="featured_image_2" alt="">
+                        <img src="images/f-img-2.4.png" class="featured_image_2" alt="">
+                    </div>
+
+                    <div class="big_image">
+                        <img src="images/f-img-2.1.png" class="big_image_02" alt="">
+                    </div>
+
+                </div>
+
+                <div class="content">
+                    <h3>New Nike Airmax Shoes</h3>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Dicta Facilis Praesentium Odit Voluptas
+                        Illum Iure Libero Quis
+                        Fuga Commodi. Autem
+                    </p>
+
+                    <div class="price">$80.99 <span>$120.99</span></div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+            <div class="box_container">
+
+                <div class="img_box">
+
+                    <div class="small_image">
+                        <img src="images/f-img-3.1.png" class="featured_image_3" alt="">
+                        <img src="images/f-img-3.2.png" class="featured_image_3" alt="">
+                        <img src="images/f-img-3.3.png" class="featured_image_3" alt="">
+                        <img src="images/f-img-3.4.png" class="featured_image_3" alt="">
+                    </div>
+
+                    <div class="big_image">
+                        <img src="images/f-img-3.1.png" class="big_image_03" alt="">
+                    </div>
+
+                </div>
+
+                <div class="content">
+                    <h3>New Nike Airmax Shoes</h3>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+
+                    <p>
+                        Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Dicta Facilis Praesentium Odit Voluptas
+                        Illum Iure Libero Quis
+                        Fuga Commodi. Autem
+                    </p>
+
+                    <div class="price">$80.99 <span>$120.99</span></div>
+
+                    <a href="#" class="btn">Add To Cart</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (review(#06)) -->
+
+    <div class="review" id="review">
+
+        <h1 class="heading"> customer's <span>review</span></h1>
+
+        <div class="container">
+
+            <div class="box">
+                <img src="images/pic1.png" alt="">
+                <h3>Rima</h3>
+
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Fugiat, Quos Eum. Laborum Aut A
+                    Consequatur Ducimus, Molestias
+                    Possimus Quisquam Rerum Temporibus Ipsum Voluptate Accusamus, Unde Ab Asperiores? Exercitationem,
+                    Unde Rem.
+                </p>
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/pic2.png" alt="">
+                <h3>Badr</h3>
+
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Fugiat, Quos Eum. Laborum Aut A
+                    Consequatur Ducimus, Molestias
+                    Possimus Quisquam Rerum Temporibus Ipsum Voluptate Accusamus, Unde Ab Asperiores? Exercitationem,
+                    Unde Rem.
+                </p>
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/pic3.png" alt="">
+                <h3>Hamza</h3>
+
+                <p>
+                    Lorem Ipsum, Dolor Sit Amet Consectetur Adipisicing Elit. Fugiat, Quos Eum. Laborum Aut A
+                    Consequatur Ducimus, Molestias
+                    Possimus Quisquam Rerum Temporibus Ipsum Voluptate Accusamus, Unde Ab Asperiores? Exercitationem,
+                    Unde Rem.
+                </p>
+
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (newsletter(#07)) -->
+
+    <div class="newsletter">
+        <div class="container">
+
+            <div class="content">
+                <h3>Monthly Newsletter</h3>
+
+                <p>
+                    Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Earum Ullam Veniam At Itaque Culpa Hic
+                    Corporis Saepe Dicta
+                    Doloremque Nihil.
+                </p>
+
+                <form action="">
+                    <input type="email" placeholder="enter your email" class="box">
+                    <input type="submit" value="send" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (footer(#08)) -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="box_container">
+
+                <div class="box">
+                    <h3>Our Locations</h3>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Riyadh </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Jeddah </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Dammam </a>
+                    <a href="#"> <i class="fas fa-map-marker-alt"></i> Taif </a>
+                </div>
+
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="#home"> <i class="fas fa-arrow-right"></i> home </a>
+                    <a href="#products"> <i class="fas fa-arrow-right"></i> products </a>
+                    <a href="#featured"> <i class="fas fa-arrow-right"></i> featured </a>
+                    <a href="#review"> <i class="fas fa-arrow-right"></i> review </a>
+                </div>
+
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my account</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my favorite</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> my orders</a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> newsletter</a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook</a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter</a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram</a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> linkedin</a>
+                </div>
+
+                <div class="copyright">
+                    Created <span>©</span> 2022
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== (js(#00)) -->
+
+    <!-- js -->
+    <script src="js/app.js"></script>
+
+    <!-- ==================== -->
+</body>
+
+</html>

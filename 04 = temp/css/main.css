@@ -1,0 +1,2743 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: all 0.2s linear;
+}
+
+:root {
+    --1-main-color: #d3ad7f;
+    --2-black: #13131a;
+    --3-bg: #010103;
+
+    --4-border-main: .1rem solid rgba(255, 255, 255, .3);
+
+    --border-left: 0.5rem solid var(--1-main-color);
+    --border-01: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --border-03: 0.1rem solid rgba(0, 0, 0, 0.3);
+
+    --box-shadow-10: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    --box-shadow-30: 0 0.5rem 1rem rgb(0 0 0 / 30%);
+}
+
+::selection {
+    background: var(--1-main-color);
+    color: #FFF;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* =
+=
+=
+=
+= */
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+body {
+    background-color: var(--3-bg);
+    /* height: 600rem; */
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.9rem 3rem;
+
+    font-size: 1.7rem;
+
+    background-color: var(--1-main-color);
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    letter-spacing: 0.2rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+    padding-bottom: 3.5rem;
+
+    color: #fff;
+}
+
+@media (max-width:450px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+.heading span {
+    color: var(--1-main-color);
+    text-transform: uppercase;
+}
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#01)) */
+
+/* 001.__________________(header)_*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* padding: 1.5rem 7%; */
+
+    border: var(--4-border-main);
+    background-color: var(--3-bg);
+}
+
+/* 002._________(container)__(11)*/
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 75px;
+}
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(logo)__(11)*/
+header .logo img {
+    height: 6rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(navbar)__(22)*/
+@media (max-width:768px) {
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        background-color: #fff;
+
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        /* right: -100%; */
+    }
+
+    /* js (navbar (toggle("active")))*/
+    header .navbar.active {
+        /* right: 0; */
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+header .navbar a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+@media (max-width:768px) {
+    header .navbar a {
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+
+        background-color: #fff;
+        color: var(--2-black);
+
+        font-size: 2rem;
+    }
+}
+
+header .navbar a:hover {
+    color: var(--1-main-color);
+    border-bottom: 0.1rem solid var(--1-main-color);
+    padding-bottom: 0.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(icons)__(33)*/
+header .icons div {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+header .icons div:hover {
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(برجر)__(33)*/
+header .icons #menu_hamburger {
+    display: none;
+}
+
+@media (max-width:768px) {
+    header .icons #menu_hamburger {
+        display: inline-block;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(search_form)__(44)*/
+header .search_form {
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: #fff;
+    width: 50rem;
+    height: 5rem;
+
+    display: flex;
+    align-items: center;
+
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+/* js */
+/* (search_form (toggle("active"))) */
+
+header .search_form.active {
+    transform: scaleY(1);
+}
+
+@media (max-width:991px) {
+    header .search_form {
+        width: 90%;
+        right: 2rem;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(input)__()*/
+header .search_form input {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+
+    font-size: 1.6rem;
+    color: var(--2-black);
+    text-transform: none;
+}
+
+/* 004._________(label)__()*/
+header .search_form label {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--2-black);
+}
+
+header .search_form label:hover {
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(cart_item_container)__(55)*/
+header .cart_item_container {
+    position: absolute;
+    top: 100%;
+    /* right: 0; */
+
+    background-color: #fff;
+
+    padding: 0 1.5rem;
+    width: 35rem;
+    height: calc(100vh - 9.5rem);
+
+    right: -100%;
+}
+
+/* js */
+/* (navbar (toggle("active"))) */
+
+header .cart_item_container.active {
+    right: 0;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(cart_item)__()*/
+header .cart_item_container .cart_item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    position: relative;
+    margin: 2rem 0;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(span)__()*/
+header .cart_item_container .cart_item .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--2-black);
+}
+
+header .cart_item_container .cart_item .fa-times:hover {
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+header .cart_item_container .cart_item img {
+    height: 7rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(content)__()*/
+
+/* 006._________(h3)__()*/
+header .cart_item_container .cart_item .content h3 {
+    font-size: 2rem;
+    color: var(--2-black);
+    padding-bottom: 0.5rem;
+}
+
+/* 006._________(price)__()*/
+header .cart_item_container .cart_item .content .price {
+    font-size: 1.5rem;
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__(22)*/
+header .cart_item_container .btn {
+    width: 100%;
+    text-align: center;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#02)) */
+
+/* 001.__________________(home)_*/
+.home {
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url(../images/home-img.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:768px) {
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* 002_________(container)__(11)*/
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003(content)__(11)*/
+.home .content {
+    max-width: 60rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+@media (max-width:768px) {
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.home .content p {
+    padding: 1rem 0;
+    font-weight: lighter;
+    line-height: 1.8;
+    color: #eee;
+
+    font-size: 2rem;
+}
+
+@media (max-width:768px) {
+
+    .home .content p {
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001.__________________(about)_*/
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--2-black);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(container)__(11)*/
+.about .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: var(--2-black);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(image)__(11)*/
+.about .container .image {
+    flex: 1 1 45rem;
+}
+
+/* 004._________(img)__()*/
+.about .container .image img {
+    width: 100%;
+}
+
+/* =
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__(22)*/
+.about .container .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+/* 004._________(h3)__()*/
+.about .container .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+/* 004._________(p)__()*/
+.about .container .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#04)) */
+
+/* 001.__________________(menu)_*/
+.menu {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(container)__(11)*/
+.menu .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+
+/* 003._________(box)__()*/
+.menu .container .box {
+    padding: 5rem;
+    text-align: center;
+    border: var(--4-border-main);
+
+    background-color: var(--2-black);
+}
+
+.menu .container .box:hover {
+    background-color: #fff;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.menu .container .box img {
+    height: 10rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.menu .container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+
+/* 004._________(price)__()*/
+.menu .container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+
+/* 005._________(span)__()*/
+.menu .container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+/* 00*._________(hover)__(ALL)*/
+.menu .container .box:hover>* {
+    color: var(--2-black);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(products)_*/
+.products {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--2-black);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(container)__(11)*/
+.products .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.products .container .box {
+    text-align: center;
+    border: var(--4-border-main);
+    padding: 2rem;
+
+    background-color: var(--3-bg);
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(icon)__()*/
+.products .container .box .icon a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+
+    font-size: 2rem;
+    border: var(--4-border-main);
+    color: #fff;
+    margin: 0.3rem;
+}
+
+/* 00*._________(hover)__(A)*/
+.products .container .box .icon a:hover {
+    background-color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(image)__()*/
+.products .container .box .image {
+    padding: 2.5rem 0;
+}
+
+/* 005._________(img)__()*/
+.products .container .box .image img {
+    height: 25rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+
+/* 005._________(h3)__()*/
+.products .container .box .content h3 {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(stars)__()*/
+.products .container .box .content .stars {
+    padding: 1.5rem;
+}
+
+
+/* 006._________(i)__()*/
+.products .container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(price)__()*/
+.products .container .box .content .price {
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+/* 006._________(span)__()*/
+.products .container .box .content .price span {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#06)) */
+
+/* 001.__________________(review)_*/
+.review {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* =
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(container)__(11)*/
+.review .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.review .container .box {
+    border: var(--4-border-main);
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--2-black);
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.review .container .box p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 2rem 0;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.review .container .box .user {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.review .container .box h3 {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(stars)__()*/
+
+/* 005._________(i)__()*/
+.review .container .box .stars i {
+    font-size: 1.5rem;
+    color: var(--1-main-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#07)) */
+
+/* 001.__________________(contact)_*/
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--2-black);
+}
+
+/* =
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(container)__(11)*/
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+
+/* 003._________(Map)__()*/
+.contact .container .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__()*/
+.contact .container form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+
+    background-color: var(--3-bg);
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.contact .container form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(input_box)__()*/
+.contact .container form .input_box {
+    display: flex;
+    align-items: center;
+
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--2-black);
+    border: var(--4-border-main);
+}
+
+
+/* 005._________(span)__()*/
+.contact .container form .input_box span {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+/* 005._________(input)__()*/
+.contact .container form .input_box input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#08)) */
+
+/* 001.__________________(blogs)_*/
+.blogs {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* =
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.blogs .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.blogs .container .box {
+    border: var(--4-border-main);
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(image)__()*/
+.blogs .container .box .image {
+    height: 25rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.blogs .container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .container .box:hover .image img {
+    transform: scale(1.2);
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+.blogs .container .box .content {
+    padding: 2rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(A)__()*/
+.blogs .container .box .content .title {
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #fff;
+}
+
+.blogs .container .box .content .title:hover {
+    color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(span)__()*/
+.blogs .container .box .content span {
+    color: var(--1-main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.blogs .container .box .content p {
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: #ccc;
+    padding: 1rem 0;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#00)) */
+
+/* 001.__________________(fff)_*/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    background-color: var(--2-black);
+    text-align: center;
+}
+
+/* =
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(social)__(11)*/
+.footer .social {
+    padding: 1rem 0;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.footer .social a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--4-border-main);
+    border-radius: 50%;
+    margin: 0.3rem;
+}
+
+.footer .social a:hover {
+    background-color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(link)__(22)*/
+.footer .link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.footer .link a {
+    padding: 0.7rem 2rem;
+    color: #fff;
+    border: var(--4-border-main);
+    font-size: 2rem;
+}
+
+.footer .link a:hover {
+    background-color: var(--1-main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(copyright)__(33)*/
+.footer .copyright {
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__()*/
+.footer .copyright span {
+    color: var(--1-main-color);
+}
+
+/* ==================== */

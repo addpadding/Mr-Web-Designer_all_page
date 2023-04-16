@@ -1,0 +1,2657 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+
+:root {
+    --red: #ff3838;
+
+    --border-red: .2rem solid var(--red);
+    --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --border-03: 0.1rem solid rgba(0, 0, 0, 0.3);
+
+    --box-shadow-10: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+::selection {
+    background: var(--red);
+    color: #FFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Nunito', sans-serif;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: all 0.2s linear;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    border: var(--border-red);
+    cursor: pointer;
+    font-size: 1.7rem;
+    border-radius: 0.5em;
+    color: var(--red);
+
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+
+    background-color: var(--red);
+    transition: 0.3s linear;
+    z-index: -1;
+}
+
+.btn:hover:before {
+    width: 100%;
+    left: 0;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: #666;
+}
+
+.heading span {
+    color: var(--red);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#01)) */
+
+/* 001.__________________(header)_*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background-color: #fff;
+    box-shadow: var(--box-shadow-10);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 75px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(A)__()*/
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #666;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(i)__()*/
+header .logo i {
+    padding-right: 0.5rem;
+    color: var(--red);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(menu_hamburger)__()*/
+#menu_hamburger {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: 0.1rem solid #666;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.5rem;
+    display: none;
+}
+
+/* js */
+/* (menu_hamburger برجر=(onclick("navbar"))) */
+
+@media (max-width:768px) {
+    #menu_hamburger {
+        display: initial;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(navbar)__()*/
+@media (max-width:768px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #f7f7f7;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
+/* js */
+/* (toggle(active)) */
+
+@media (max-width:768px) {
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+@media (max-width:768px) {
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: 0.2rem solid rgba(0, 0, 0, 0.1);
+        border-left: 0.5rem solid var(--red);
+        background-color: #fff;
+    }
+}
+
+header .navbar a:hover {
+    color: var(--red);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#02)) */
+
+/* 001.__________________(home)_*/
+.home {
+    background-image: url(../images/home-bg.jpg);
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.home .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 1.5rem;
+    min-height: 100vh;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__()*/
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.home .content h3 {
+    font-size: 5rem;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.home .content p {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(images)__()*/
+.home .images {
+    flex: 1 1 40rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.home .images img {
+    width: 100%;
+    padding: 1rem;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(3rem);
+    }
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001.__________________(speciality)_*/
+.speciality {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.speciality .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.speciality .container .box {
+    flex: 1 1 30rem;
+
+    border-radius: 0.5rem;
+    border: var(--border-03);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.speciality .container .box .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: -100%;
+}
+
+.speciality .container .box:hover .image {
+    top: 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(div)__()*/
+.speciality .container .box .content {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.speciality .container .box:hover .content {
+    transform: translateY(100%);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.speciality .container .box .content img {
+    margin: 1.5rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.speciality .container .box .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.speciality .container .box .content p {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(popular)_*/
+.popular {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.popular .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.popular .container .box {
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border: var(--border-03);
+    border-radius: 0.5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+    position: relative;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__()*/
+.popular .container .box .price {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    background-color: var(--red);
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.popular .container .box img {
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.popular .container .box h3 {
+    color: #333;
+    font-size: 2.5rem;
+    padding-top: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(stars)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(i)__()*/
+.popular .container .box .stars i {
+    color: gold;
+    font-size: 1.7rem;
+    padding: 1rem 0.1rem;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(step)_*/
+.step {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.step .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.step .box {
+    flex: 1 1 25rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.step .box img {
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    box-shadow: var(--box-shadow);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.step .box h3 {
+    font-size: 3rem;
+    color: #333;
+    padding: 1rem;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#06)) */
+
+/* 001.__________________(gallery)_*/
+.gallery {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.gallery .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.gallery .box {
+    height: 25rem;
+    flex: 1 1 30rem;
+    border: 1rem solid #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.gallery .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+.gallery .box .content {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    padding-top: 5rem;
+    text-align: center;
+
+    top: -100%;
+}
+
+.gallery .box:hover .content {
+    top: 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.gallery .box .content h3 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.gallery .box .content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#07)) */
+
+/* 001.__________________(review)_*/
+.review {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.review .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.review .container .box {
+    flex: 1 1 30rem;
+    text-align: center;
+    padding: 2rem;
+    border: 1rem solid #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    background-color: #333;
+    margin-top: 6rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.review .container img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    margin-top: -8rem;
+    object-fit: cover;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.review .container h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(stars)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(i)__()*/
+.review .container .stars i {
+    font-size: 2rem;
+    color: var(--red);
+    padding: 0.5rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.review .container p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#08)) */
+
+/* 001.__________________(order)_*/
+.order {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.order .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+    padding: 2rem;
+    margin-top: 1rem;
+
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-10);
+    background-color: #f7f7f7;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(image)__()*/
+.order .container .image {
+    flex: 1 1 30rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.order .container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__()*/
+.order .container form {
+    flex: 1 1 50rem;
+    padding: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(input_box)__()*/
+.order .container form .input_box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(input)__()*/
+.order .container form .input_box input {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: var(--border-03);
+    border-radius: 0.5rem;
+
+    width: 49%;
+}
+
+@media (max-width:450px) {
+    .order .container form .input_box input {
+        width: 100%;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(textarea)__()*/
+.order .container form textarea {
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: var(--border-03);
+    border-radius: 0.5rem;
+    resize: none;
+
+    width: 100%;
+    height: 15rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(input)__()*/
+.order .container form .btn {
+    background: none;
+}
+
+.order .container form .btn:hover {
+    background-color: var(--red);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#09)) */
+
+/* 001.__________________(footer)_*/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    text-align: center;
+    background-color: #000;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(share)__()*/
+.footer .share {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.footer .share a {
+    font-weight: bold;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(copy_right)__(22)*/
+.footer .copy_right {
+    padding: 2rem 1rem;
+    color: #fff;
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__()*/
+.footer .copy_right span {
+    color: var(--red);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#10)) */
+
+/* 001.__________________(scroll_top)_*/
+
+#scroll_top {
+    position: fixed;
+    right: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 4rem;
+    background-color: var(--red);
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s;
+
+    top: calc(100% - 12rem);
+    /* top: -120%; */
+    /* opacity: 0; */
+    right: -6%;
+}
+
+/* js */
+/* (add(active)) */
+
+#scroll_top.active {
+    /* top: calc(100% - 12rem); */
+    /* opacity: 1; */
+    right: 2rem;
+}
+
+/* ==================== */

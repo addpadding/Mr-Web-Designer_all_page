@@ -1,0 +1,2510 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: all 0.2s linear;
+}
+
+:root {
+    --1pink: #e84393;
+
+    --2-background-pink: rgb(255, 52, 153, 0.05);
+
+    --border-left: 0.5rem solid var(--1pink);
+    --border-01: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --border-03: 0.1rem solid rgba(0, 0, 0, 0.3);
+
+    --box-shadow-10: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    --box-shadow-30: 0 0.5rem 1rem rgb(0 0 0 / 30%);
+}
+
+::selection {
+    background: var(--1pink);
+    color: #FFF;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* =
+=
+=
+=
+= */
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--1pink);
+    border-radius: 5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.9rem 3.5rem;
+
+    font-size: 1.7rem;
+    border-radius: 5rem;
+
+    background-color: #333;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: var(--1pink);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 2rem 0;
+    color: #333;
+    background-color: var(--2-background-pink);
+}
+
+@media (max-width:450px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+.heading span {
+    color: var(--1pink);
+}
+
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#01)) */
+
+/* 001.__________________(header)_*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    background-color: #fff;
+    box-shadow: var(--box-shadow-10);
+}
+
+/*
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 75px;
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+
+/* 003._________(logo)__(11)*/
+header .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__()*/
+header .logo span {
+    color: var(--1pink);
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(navbar)__(22)*/
+
+@media (max-width:768px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eee;
+        border-top: var(--border-01);
+
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+}
+
+@media (max-width:768px) {
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+}
+
+/* =
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+@media (max-width:768px) {
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background-color: #fff;
+        display: block;
+
+        border: var(--border-01);
+        border-left: var(--border-left);
+    }
+}
+
+header .navbar a:hover {
+    color: var(--1pink);
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(icons)__(33)*/
+
+/* 004._________(A)__()*/
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--1pink);
+}
+
+/* =
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(toggle)__(44)*/
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: var(--border-03);
+
+    display: none;
+}
+
+@media (max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#00)) */
+
+/* 001.__________________(fff)_*/
+.home {
+    display: flex;
+    align-items: center;
+
+    min-height: 100vh;
+
+    background-image: url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width:991px) {
+    .home {
+        background-position: left;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__()*/
+.home .content {
+    max-width: 50rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+}
+
+@media (max-width:768px) {
+    .home .content h3 {
+        font-size: 5rem;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__()*/
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--1pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+@media (max-width:768px) {
+    .home .content span {
+        font-size: 2.5rem;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.home .content p {
+    font-size: 1.5em;
+    color: #999;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001.__________________(about)_*/
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.about .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(video_container)__(11)*/
+.about .container .video_container {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(video)__()*/
+.about .container .video_container video {
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow-10);
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.about .container .video_container h3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background-color: #fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__(22)*/
+.about .container .content {
+    flex: 1 1 40rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.about .container .content h3 {
+    font-size: 3rem;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= 
+*/
+
+/* 004._________(p)__()*/
+.about .container .content p {
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#04)) */
+
+/* 001.__________________(icon)_*/
+.icon {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #eee;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.icon .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(icon_box)__()*/
+.icon .icon_box {
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+
+    padding: 2rem;
+
+    border: var(--border-01);
+    box-shadow: var(--box-shadow-10);
+    background-color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.icon .icon_box img {
+    height: 5rem;
+    margin-right: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(info)__()*/
+
+/* 005._________(h3)__()*/
+.icon .icon_box .info h3 {
+    color: #333;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width:768px) {
+    .icon .icon_box .info h3 {
+        font-size: 2rem;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(span)__()*/
+.icon .icon_box .info span {
+    color: #555;
+    font-size: 1.3rem;
+}
+
+@media (max-width:768px) {
+    .icon .icon_box .info span {
+        font-size: 1.7rem;
+    }
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(fff)_*/
+.products {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.products .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.products .container .box {
+    flex: 1 1 30rem;
+    box-shadow: var(--box-shadow-10);
+    border: var(--border-01);
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+
+/* 004._________(discount)__(11)*/
+.products .container .box .discount {
+    position: absolute;
+    top: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 2rem;
+    color: var(--1pink);
+    background-color: var(--2-background-pink);
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(image)__(22)*/
+.products .container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.products .container .box .image img {
+    height: 25rem;
+}
+
+.products .container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(icons)__()*/
+.products .container .box .image .icons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+
+    bottom: -7rem;
+}
+
+.products .container .box:hover .image .icons {
+    bottom: 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(A)__()*/
+.products .container .box .image .icons a {
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background-color: var(--1pink);
+    color: #fff;
+}
+
+.products .container .box .image .icons a:hover {
+    background-color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(cart_btn)__()*/
+.products .container .box .image .icons .cart_btn {
+    border-left: 0.1rem solid #fff7;
+    border-right: 0.1rem solid #fff7;
+    width: 100%;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__(33)*/
+.products .container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.products .container .box .content h3 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(price)__()*/
+.products .container .box .content .price {
+    font-size: 2.5rem;
+    color: var(--1pink);
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(span)__()*/
+.products .container .box .content .price span {
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#06)) */
+
+/* 001.__________________(review)_*/
+.review {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.review .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.review .container .box {
+    flex: 1 1 30rem;
+    padding: 3rem 2rem;
+
+    box-shadow: var(--box-shadow-10);
+    border: var(--border-01);
+    border-radius: 0.5rem;
+
+    position: relative;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(stars)__()*/
+
+/* 005._________(i)__()*/
+.review .container .box .stars i {
+    color: var(--1pink);
+    font-size: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__(22)*/
+.review .container .box p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-top: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(user)__(33)*/
+.review .container .box .user {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.review .container .box .user img {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(user_info)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+=*/
+
+/* 006._________(h3)__()*/
+.review .container .box .user .user_info h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+=*/
+
+/* 006._________(span)__()*/
+.review .container .box .user .user_info span {
+    font-size: 1.5rem;
+    color: #999;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(span)__(44)*/
+.review .container .box .fa-quote-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #eee;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#07)) */
+
+/* 001.__________________(contact)_*/
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.contact .container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__(11)*/
+.contact .container form {
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+
+    box-shadow: var(--box-shadow-10);
+    border: var(--border-01);
+
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(box)__()*/
+.contact .container form .box {
+    width: 100%;
+    padding: 1rem;
+    margin: 0.7rem 0;
+
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: var(--border-01);
+    border-radius: 0.5rem;
+}
+
+.contact .container form .box:focus {
+    border: var(--1pink);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(textarea)__()*/
+.contact .container form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(image)__(22)*/
+.contact .container .image {
+    flex: 1 1 40rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.contact .container .image img {
+    width: 100%;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#08)) */
+
+/* 001.__________________(footer)_*/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #37474f;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.footer .container .box {
+    flex: 1 1 25rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.footer .container .box h3 {
+    color: var(--1pink);
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.footer .container .box a {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.footer .container .box a:hover {
+    color: var(--1pink);
+    text-decoration: underline;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.footer .container .box img {
+    margin-top: 1rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(copyright)__(22)*/
+.footer .copyright {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+    border-top: var(--border-01);
+    border-color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003(span)__()*/
+.footer .copyright span {
+    color: var(--1pink);
+}
+
+
+/* ==================== */

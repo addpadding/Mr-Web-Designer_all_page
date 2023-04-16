@@ -1,0 +1,978 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --1-black: #2c2c54;
+    --1-orange: #ff9f1a;
+
+    --2-box-shadow-black: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+
+    --2-text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+
+    --2-border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: all 0.2s ease-out;
+}
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 600rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+
+    html {
+        scroll-padding-top: 0;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+
+/* =
+=
+=
+=
+= */
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--1-orange);
+    border-radius: 50px;
+}
+
+::selection {
+    background: var(--1-orange);
+    color: #FFF;
+}
+
+/* ! */
+
+/* html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: hsl(0, 0%, 74%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(0, 0%, 17%);
+} */
+
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 001._________(heading)__()*/
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+
+/* 001._________(btn)__()*/
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 3rem;
+
+    font-size: 1.7rem;
+    font-weight: bold;
+
+    border-radius: 0.5rem;
+    border: 0.2rem solid var(--1-black);
+
+    color: var(--1-black);
+    background-color: #fff;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--1-orange);
+    color: #fff;
+}
+
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#00)) */
+
+/* 001._________(header)__()*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    box-shadow: var(--2-box-shadow-black);
+    background-color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 75px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(A)__(11)*/
+header .logo {
+    font-size: 2.5rem;
+    color: var(--1-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(nav)__(22)*/
+
+@media (max-width:768px) {
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        /* left: 0; */
+        left: -120%;
+
+        width: 100%;
+
+        border-top: var(--2-border);
+
+        background-color: #eee;
+    }
+}
+
+/* js */
+/* ((navbar) => (toggle("active"))) */
+
+@media (max-width:768px) {
+    header .navbar.active {
+        left: 0;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+header .navbar a {
+    margin: 0 1rem;
+
+    font-size: 1.7rem;
+    color: var(--1-black);
+}
+
+header .navbar a:hover {
+    color: var(--1-orange);
+}
+
+@media (max-width: 768px) {
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1.5rem;
+
+        font-size: 2rem;
+        text-align: center;
+
+        border-radius: 0.5rem;
+        border: 0.1rem solid var(--1-black);
+
+        background-color: #fff;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(icons)__(33)*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+header .icons a {
+    margin-left: 1.5rem;
+
+    font-size: 2.5rem;
+    color: var(--1-black);
+}
+
+header .icons a:hover {
+    color: var(--1-orange);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(menu_hamburger)__(44)*/
+header #menu_hamburger {
+    /* padding: 0.5rem 1.5rem; */
+    padding: 1rem 1.5rem;
+
+    font-size: 2.5rem;
+    border-radius: 0.3rem;
+
+    border: 0.1rem solid var(--1-black);
+    color: var(--1-black);
+
+    cursor: pointer;
+    display: none;
+}
+
+/* js */
+/* ((menu_hamburger برجر ) => (onclick("navbar"))) */
+
+@media (max-width:768px) {
+    header #menu_hamburger {
+        display: block;
+    }
+
+    header #menu_hamburger.fa-times {
+        color: #ff9f1a;
+    }
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001._________(home)__()*/
+.home {
+    position: relative;
+    /* background-image: url(../images/home-bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(slider_container)__()*/
+
+.home .slider_container {
+    display: none;
+}
+
+/* js */
+/* ((slider_container) => (add("active"))) */
+
+.home .slider_container.active {
+    display: block;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.home .box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    /* ! */
+    padding: 0 9%;
+    padding-top: 9rem;
+
+    min-height: 100vh;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+
+/* 003._________(01)__()*/
+.home .slider_container:nth-child(1) .box {
+    background-image: url(../images/home-bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 003._________(02)__()*/
+.home .slider_container:nth-child(2) .box {
+    background-image: url(../images/home-bg-2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 003._________(03)__()*/
+.home .slider_container:nth-child(3) .box {
+    background-image: url(../images/home-bg-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+.home .box .content {
+    flex: 1 1 40rem;
+    animation: slide_content 0.5s linear 1s backwards;
+}
+
+@keyframes slide_content {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(span)__()*/
+.home .box .content span {
+    font-size: 2rem;
+    color: var(--1-orange);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.home .box .content h3 {
+    font-size: 5rem;
+    color: var(--1-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.home .box .content p {
+    padding: 0.5rem 0;
+
+    font-size: 1.7rem;
+    color: #666;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(image)__()*/
+.home .box .image {
+    flex: 1 1 50rem;
+    padding-bottom: 15rem;
+
+    position: relative;
+    z-index: 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(shoe)__()*/
+.home .box .image .shoe {
+    width: 100%;
+    transform: rotate(-35deg);
+
+    animation: shoe 0.3s linear;
+}
+
+@keyframes shoe {
+    0% {
+        transform: rotate(0deg) scale(0.5);
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(text)__()*/
+.home .box .image .text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    animation: text 0.5s linear 0.5s backwards;
+}
+
+@keyframes text {
+    0% {
+        opacity: 0;
+        top: -10rem;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(prev next)__()*/
+
+.home #prev,
+.home #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+
+    height: 5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+
+    font-size: 2rem;
+    text-align: center;
+
+    border-radius: 50%;
+    border: 0.2rem solid var(--1-black);
+
+    color: var(--1-black);
+
+    cursor: pointer;
+}
+
+.home #prev:hover,
+.home #next:hover {
+    color: #fff;
+    background-color: var(--1-orange);
+}
+
+.home #prev {
+    left: 3rem;
+}
+
+.home #next {
+    right: 3rem;
+}

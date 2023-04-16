@@ -1,0 +1,3909 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --1-green: #27ae60;
+    --2-dark-color: #219150;
+    --3-black: #444;
+    --4-light-color: #666;
+
+    --5-border-01: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --border-03: 0.1rem solid rgba(0, 0, 0, 0.3);
+    --6-border-hover: .1rem solid var(--3-black);
+
+    --7-box-shadow-10: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    --box-shadow-30: 0 0.5rem 1rem rgb(0 0 0 / 30%);
+}
+
+::selection {
+    background: var(--1-green);
+    color: #FFF;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    transition: all 0.2s linear;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width:768px) {
+    body {
+        padding-bottom: 6rem;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+
+    html {
+        scroll-padding-top: 0;
+    }
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+
+/* =
+=
+=
+=
+= */
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--1-green);
+    border-radius: 5rem;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.heading {
+    position: relative;
+    margin-bottom: 2rem;
+
+    text-align: center;
+}
+
+@media (max-width:450px) {
+    .heading {
+        font-size: 3rem;
+    }
+}
+
+.heading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+.heading span {
+    padding: 0.5rem 2rem;
+    font-size: 3rem;
+
+    background-color: #fff;
+    color: var(--3-black);
+    border: var(--5-border-01);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.9rem 3rem;
+
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+
+    background-color: var(--1-green);
+    color: #fff;
+
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: var(--2-dark-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#01)) */
+
+/* 001.__________________(header)_*/
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(header_01)__()*/
+header .header_01 {
+    background-color: #fff;
+}
+
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(container)__()*/
+header .header_01 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 75px;
+}
+
+@media (max-width:768px) {
+    header .header_01 .container {
+        position: relative;
+        box-shadow: var(--7-box-shadow-10);
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__(11)*/
+header .header_01 .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(i)__(11)*/
+header .header_01 .logo i {
+    color: var(--1-green);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(form)__()*/
+header .header_01 .search_form {
+    display: flex;
+    align-items: center;
+
+    width: 50rem;
+    height: 5rem;
+
+    border: var(--5-border-01);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+@media (max-width:768px) {
+    header .header_01 .search_form {
+        position: absolute;
+        /* top: 115%; */
+        right: 2rem;
+        width: 90%;
+        box-shadow: var(--7-box-shadow-10);
+
+        top: -115%;
+    }
+}
+
+/* js */
+/* (search_form (toggle("active"))) */
+
+@media (max-width:768px) {
+    header .header_01 .search_form.active {
+        top: 115%;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(input)__()*/
+header .header_01 .search_form input {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.2rem;
+
+    font-size: 1.6rem;
+    text-transform: none;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(label)__()*/
+header .header_01 .search_form label {
+    padding-right: 1.5rem;
+
+    font-size: 2.5rem;
+    color: var(--3-black);
+    cursor: pointer;
+}
+
+header .header_01 .search_form label:hover {
+    color: var(--1-green);
+}
+
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(icon)__()*/
+header .header_01 .icon div,
+header .header_01 .icon a {
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--3-black);
+    cursor: pointer;
+}
+
+header .header_01 .icon div:hover,
+header .header_01 .icon a:hover {
+    color: var(--1-green);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(search_btn)__()*/
+header .header_01 .icon #search_btn {
+    display: none;
+}
+
+/* js */
+/* (search_btn (onclick("search_form"))) */
+
+@media (max-width:768px) {
+    header .header_01 .icon #search_btn {
+        display: inline-block;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(header_02)__()*/
+header .header_02 {
+    background-color: var(--1-green);
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width:768px) {
+    header .header_02 {
+        display: none;
+    }
+}
+
+/* (header_02 (add("active"))) */
+/* js */
+
+header .header_02.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(container)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(navbar)__()*/
+header .header_02 .navbar {
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(A)__()*/
+header .header_02 .navbar a {
+    display: inline-block;
+    padding: 1.2rem;
+
+    font-size: 1.7rem;
+    color: #fff;
+}
+
+header .header_02 .navbar a:hover {
+    background-color: var(--2-dark-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#02)) */
+
+/* 001.__________________(bottom_navbar)_*/
+.bottom_navbar {
+    text-align: center;
+    background-color: var(--1-green);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: none;
+}
+
+@media (max-width:768px) {
+    .bottom_navbar {
+        display: block;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(A)__()*/
+.bottom_navbar a {
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #fff;
+}
+
+.bottom_navbar a:hover {
+    background-color: var(--2-dark-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001.__________________(sigin_in)_*/
+.sigin_in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    /* left: 0; */
+    z-index: 10000;
+
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    right: -105%;
+}
+
+/* js */
+/* (sigin_in(toggle("active"))) */
+
+.sigin_in.active {
+    right: 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002_________(form)__(11)*/
+
+.sigin_in form {
+    padding: 2rem;
+    margin: 2rem;
+
+    width: 40rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    border: var(--5-border-01);
+    box-shadow: var(--7-box-shadow-10);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(h3)__()*/
+.sigin_in form h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--3-black);
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(span)__()*/
+.sigin_in form span {
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.sigin_in form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    padding: 1rem 1.2rem;
+
+
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-transform: none;
+    border: var(--5-border-01);
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(check_box)__()*/
+.sigin_in form .check_box {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 1rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(label)__()*/
+.sigin_in form .check_box label {
+    font-size: 1.5rem;
+    color: var(--4-light-color);
+    cursor: pointer;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(input)__()*/
+.sigin_in form .btn {
+    width: 100%;
+    margin: 1.5rem 0;
+
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(p)__()*/
+.sigin_in form p {
+    padding-top: 0.8rem;
+    font-size: 1.5rem;
+    color: var(--4-light-color);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.sigin_in form p a {
+    color: var(--1-green);
+    text-decoration: underline;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(close_btn)__(11)*/
+.sigin_in #close_btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+
+    font-size: 5rem;
+    color: var(--3-black);
+    cursor: pointer;
+}
+
+.sigin_in #close_btn:hover {
+    color: var(--1-green);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#04)) */
+
+/* 001.__________________(home)_*/
+.home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-image: url(../image/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.home .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__()*/
+.home .container .content {
+    flex: 1 1 42rem;
+}
+
+@media (max-width:768px) {
+    .home .container .content {
+        text-align: center;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.home .container .content h3 {
+    color: var(--3-black);
+    font-size: 4.5rem;
+}
+
+@media (max-width:768px) {
+    .home .container .content h3 {
+        font-size: 3.5rem;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.home .container .content p {
+    color: var(--4-light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box_slider)__()*/
+.home .container .box_slider {
+    flex: 1 1 42rem;
+    margin-top: 2rem;
+
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(swiper-wrapper)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(A)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(img)__()*/
+.home .container .box_slider a img {
+    height: 25rem;
+}
+
+.home .container .box_slider a:hover img {
+    transform: scale(0.9);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.home .container .box_slider .stand {
+    width: 100%;
+    margin-top: -2rem;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(icons)_*/
+.icons_container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.icons_container .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.icons_container .box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(i)__()*/
+.icons_container .box i {
+    font-size: 3.5rem;
+    color: var(--1-green);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.icons_container .box .content h3 {
+    font-size: 2.2rem;
+    color: var(--3-black);
+    padding-bottom: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.icons_container .box .content p {
+    font-size: 1.4rem;
+    color: var(--4-light-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#06)) */
+
+/* 001.__________________(featured)_*/
+.featured {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.featured .container {
+    padding: 0;
+}
+
+/* 002._________(featured_slider)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(swiper-wrapper)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(box)__()*/
+.featured .featured_slider .box {
+    position: relative;
+    /* width: 25rem; */
+    margin: 2rem 0;
+
+    overflow: hidden;
+    border: var(--5-border-01);
+    text-align: center;
+}
+
+.featured .featured_slider .box:hover {
+    border: var(--6-border-hover);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(icons)__()*/
+.featured .featured_slider .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    border-bottom: var(--6-border-hover);
+    background-color: #fff;
+
+    transform: translateY(-105%);
+}
+
+.featured .featured_slider .box:hover .icons {
+    transform: translateY(0%);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(A)__()*/
+.featured .featured_slider .box .icons a {
+    color: var(--3-black);
+    font-size: 2.2rem;
+    padding: 1.3rem 1.5rem;
+}
+
+.featured .featured_slider .box .icons a:hover {
+    background-color: var(--1-green);
+    color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(image)__()*/
+.featured .featured_slider .box .image {
+    padding: 1rem;
+    background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
+}
+
+.featured .featured_slider .box:hover .image {
+    transform: translateY(6rem);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(img)__()*/
+.featured .featured_slider .box .image img {
+    height: 25rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(content)__()*/
+.featured .featured_slider .box .content {
+    background-color: #eee;
+    padding: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(h3)__()*/
+.featured .featured_slider .box .content h3 {
+    font-size: 2rem;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(price)__()*/
+.featured .featured_slider .box .content .price {
+    padding-top: 1rem;
+
+    font-size: 2.2rem;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+007
+=
+=
+=
+=
+=
+= */
+
+/* 007._________(span)__()*/
+.featured .featured_slider .box .content .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: var(--4-light-color);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(next)__(prev)*/
+.featured .swiper .swiper-button-next,
+.featured .swiper .swiper-button-prev {
+    height: 4rem;
+    width: 4rem;
+
+    color: var(--3-black);
+    border: var(--6-border-hover);
+    background-color: #fff;
+}
+
+.featured .swiper .swiper-button-next::after,
+.featured .swiper .swiper-button-prev:after {
+    font-size: 2rem;
+}
+
+.featured .swiper .swiper-button-next:hover,
+.featured .swiper .swiper-button-prev:hover {
+    background-color: var(--3-black);
+    color: #fff;
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#07)) */
+
+/* 001.__________________(newsletter)_*/
+.newsletter {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-image: url(../image/letter-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width:768px) {
+    .newsletter {
+        background-position: right;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__()*/
+.newsletter form {
+    max-width: 45rem;
+    margin-left: auto;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+@media (max-width:768px) {
+    .newsletter form {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.newsletter form h3 {
+    padding-bottom: 0.7rem;
+
+    font-size: 2.2rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(input)__()*/
+.newsletter form .box {
+    width: 100%;
+    margin: 0.7rem 0;
+    padding: 1rem 1.2rem;
+
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    text-transform: none;
+    color: var(--3-black);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#08)) */
+
+/* 001.__________________(arrivals)_*/
+.arrivals {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.arrivals .container {
+    padding: 0;
+}
+
+/* 002._________(arrivals_slider)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(swiper-wrapper)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(box)__()*/
+.arrivals .arrivals_slider .box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    border: var(--5-border-01);
+}
+
+.arrivals .arrivals_slider .box:hover {
+    border: var(--6-border-hover);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.arrivals .arrivals_slider .box .image img {
+    height: 15rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(content)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(h3)__()*/
+.arrivals .arrivals_slider .box .content h3 {
+    font-size: 2rem;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(price)__()*/
+.arrivals .arrivals_slider .box .content .price {
+    font-size: 2.2rem;
+    color: var(--3-black);
+    padding-bottom: 0.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+007
+=
+=
+=
+=
+=
+= */
+
+/* 007._________(span)__()*/
+.arrivals .arrivals_slider .box .content .price span {
+    font-size: 1.5rem;
+    color: var(--4-light-color);
+    text-decoration: line-through;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(stars)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+007
+=
+=
+=
+=
+=
+= */
+
+/* 007._________(i)__()*/
+.arrivals .arrivals_slider .box .content .stars i {
+    font-size: 1.5rem;
+    color: var(--1-green);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#09)) */
+
+/* 001.__________________(offer)_*/
+.offer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f3f3f3;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.offer .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(content)__()*/
+.offer .content {
+    flex: 1 1 42rem;
+}
+
+@media (max-width:768px) {
+    .offer .content {
+        text-align: center;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.offer .content h3 {
+    padding-bottom: 0.5rem;
+
+    font-size: 2.5rem;
+    color: var(--1-green);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h1)__()*/
+.offer .content h1 {
+    font-size: 4rem;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(p)__()*/
+.offer .content p {
+    padding: 1rem 0;
+
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--4-light-color);
+}
+
+@media (max-width:768px) {
+    .offer .content p {
+        width: 68%;
+        margin: 0 auto;
+    }
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(image)__(22)*/
+.offer .image {
+    flex: 1 1 42rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.offer .image img {
+    width: 100%;
+}
+
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#10)) */
+
+/* 001.__________________(reviews)_*/
+.reviews {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.reviews .container {
+    padding: 0;
+}
+
+/* 002._________(reviews_slider)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(swiper-wrapper)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(box)__()*/
+.reviews .reviews_slider .box {
+    /* width: 30rem; */
+    padding: 2rem;
+    margin: 2rem 0;
+
+    text-align: center;
+    border: var(--5-border-01);
+}
+
+.reviews .reviews_slider .box:hover {
+    border: var(--6-border-hover);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(img)__()*/
+.reviews .reviews_slider .box img {
+    height: 7rem;
+    width: 7rem;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(h3)__()*/
+.reviews .reviews_slider .box h3 {
+    font-size: 2.2rem;
+    padding: 0.5rem 0;
+
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(p)__()*/
+.reviews .reviews_slider .box p {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--4-light-color);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(stars)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(i)__()*/
+.reviews .reviews_slider .box .stars i {
+    font-size: 1.7rem;
+    color: var(--1-green);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#11)) */
+
+/* 001.__________________(blogs)_*/
+.blogs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.blogs .container {
+    padding: 0;
+}
+
+/* 002._________(blogs_slider)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(swiper-wrapper)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(box)__()*/
+.blogs .blogs_slider .box {
+    /* width: 30rem; */
+    margin: 2rem 0;
+
+    border: var(--5-border-01);
+}
+
+.blogs .blogs_slider .box:hover {
+    border: var(--6-border-hover);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(image)__()*/
+.blogs .blogs_slider .box .image {
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(img)__()*/
+.blogs .blogs_slider .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blogs .blogs_slider .box:hover .image img {
+    transform: scale(1.1);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(content)__()*/
+.blogs .blogs_slider .box .content {
+    padding: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(h3)__()*/
+.blogs .blogs_slider .box .content h3 {
+    font-size: 2.2rem;
+    color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+006
+=
+=
+=
+=
+=
+= */
+
+/* 006._________(p)__()*/
+.blogs .blogs_slider .box .content p {
+    padding: 1rem 0;
+
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--4-light-color);
+}
+
+/* ==================== */
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#12)) */
+
+/* 001.__________________(footer)_*/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: var(--3-black);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(h3)__()*/
+.footer .container .box h3 {
+    padding: 1rem 0;
+
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(A)__()*/
+.footer .container .box a {
+    display: block;
+    padding: 1rem 0;
+
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+005
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(i)__()*/
+.footer .container .box a i {
+    padding-right: 0.5rem;
+    color: var(--1-green);
+}
+
+.footer .container .box a:hover i {
+    padding-right: 2rem;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+004
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.footer .container .box .map {
+    width: 100%;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(social)__(22)*/
+.footer .social {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(A)__()*/
+.footer .social a {
+    height: 5rem;
+    width: 5rem;
+    margin: 0 0.3rem;
+
+    font-size: 2rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--1-green);
+}
+
+.footer .social a:hover {
+    background-color: var(--2-dark-color);
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+002
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(copyright)__(33)*/
+.footer .copyright {
+    margin-top: 2rem;
+    padding: 0 1rem;
+    padding-top: 2.5rem;
+
+    font-size: 2rem;
+    text-align: center;
+    border-top: var(--5-border-01);
+    border-color: #fff;
+    color: #fff;
+}
+
+/* 
+=
+=
+=
+=
+=
+=
+003
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(span)__()*/
+.footer .copyright span {
+    color: var(--1-green);
+}
+
+/* ==================== */
